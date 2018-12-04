@@ -1,7 +1,63 @@
 body
-	background: $mainColor
-	font-family: Arial, Helvetica, sans-serif
-	font-size: 14px
+	font-family: 'Myriad Pro', sans-serif
+
+.container
+	width: 100%
+	max-width: 1190px
+	position: relative
+	margin: 0 auto
+	padding: 0 10px
+
+.block
+	+r(1169)
+		// padding: 60px 0
+	+r(1023)
+		padding: 40px 0
+	+r(767)
+		padding: 30px 0
+	+r(479)
+		padding: 25px 0
+
+.title
+	font-family: 'Myriad Pro', sans-serif
+	font-size: 46px
+	line-height: 46px
+	text-align: center
+	font-weight: 700
+	margin: 0 auto
+	+r(1199)
+		font-size: 36px
+		line-height: 37px
+	+r(1023)
+		font-size: 35px
+		line-height: 36px
+	+r(767)
+		font-size: 30px
+		line-height: 31px
+	+r(479)
+		font-size: 26px
+		line-height: 27px
+
+.dib
+	display: inline-block
+
+.text-black
+	color: #000
+
+.text-semibold
+	font-weight: 600
+
+.text-bold
+	font-weight: 700
+
+.text-orange
+	color: $orange
+
+.text-dark
+	color: $dark
+
+.text-nowrap
+	white-space: nowrap
 
 // Font icons
 .fico
