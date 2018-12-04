@@ -35,41 +35,170 @@
 		justify-content: flex-end
 		.info
 			max-width: 380px
+			margin-right: 30px
 			.logo
 				max-width: 165px
 				width: 100%
-				margin-bottom: 27px
+				margin-bottom: 20px
 			&__list
 				.item
 					font-size: 19px
 					position: relative
 					padding-left: 60px
+					line-height: 1.26
 					+nlt
-						margin-bottom: 30px
-					&::after
-						content: ''
-						display: block
+						margin-bottom: 31px
+					.fico
 						position: absolute
+						display: flex
+						align-items: center
+						justify-content: center
 						left: 0
-						top: 50%
-						width: 35px
-						height: 35px
-						transform: translateY(-50%)
+						top: 0
+						font-size: 18px
+						color: white
 						background: #ec7902
+						width: 46px
+						height: 46px
 						border-radius: 50%
 						border: 5px solid white
-						// +sprite($check)
 				.text-semibold
 					display: block
 	&__title
 		text-align: left
 		font-size: 31px
 		line-height: 1.03
-		color: #222222
-		margin-bottom: 31px
+		color: #222222s
+		margin-bottom: 32px
 	.text
 		font-size: 20px
 		color: $dark
-		line-height: 1.2
+		line-height: 1.26
 		font-style: italic
-		margin-bottom: 30px
+		margin-bottom: 20px
+.order-form
+	width: 250px
+.form
+	width: 100%
+	padding: 29px 15px 24px 15px
+	background-color: white
+	position: relative
+	border-radius: 50px 0 50px 0
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		right: -52px
+		top: 117px
+		+sprite($line)
+	&__title
+		text-align: center
+		font-size: 20px
+		color: #222222
+		line-height: 1.18
+		max-width: 160px
+		margin: auto
+		margin-bottom: 17px
+	&__price
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		padding-bottom: 15px
+		margin-bottom: 13px
+		border-bottom: 1px solid transparentize(black, .9)
+		.old
+			padding-right: 12px
+			border-right: 1px solid transparentize(black, .9)
+			margin-right: 20px
+			&__text
+				font-size: 14px
+				color: #777777
+			&__value
+				font-size: 32px
+				font-weight: 300
+				color: #999999
+			&__current
+				color: #999999
+				font-size: 16px
+		.new
+			&__text
+				font-size: 14px
+				color: #000000
+			&__value
+				font-size: 36px
+				color: #87ac13
+				font-weight: 900
+			&__current
+				font-size: 16px
+				color: #87ac13
+				z-index: 11
+		.note
+			font-size: 16px
+			color: #87ac13
+	.leftovers
+		text-align: center
+		font-size: 18px
+		color: #000000
+		margin-bottom: 12px
+		small
+			display: block
+	.input-wrap
+		width: 100%
+		margin: auto
+		position: relative
+		margin-bottom: 15px
+		.fico
+			position: absolute
+			left: 23px
+			top: 21px
+			font-size: 23px
+			color: #87ac13
+		.input
+			padding-left: 55px
+			padding-right: 10px
+			width: 100%
+			box-sizing: border-box
+			height: 65px
+			border-radius: 32px
+			background-color: #ffffff
+			border: none
+			outline: none
+			font-size: 18px
+			color: #666666
+			border: 2px solid #efefef
+			+placeholder
+			font-family: 'Myriad Pro', Arial, Helvetica, sans-serif
+	.foodnote
+		text-align: center
+		display: block
+		font-size: 14px
+		margin-bottom: 20px
+	.protection
+		position: relative
+		padding-left: 25px
+		font-size: 16px
+		color: #000000
+		display: block
+		max-width: 213px
+		width: 100%
+		margin: auto
+		.fico
+			position: absolute
+			position: absolute
+			left: -6px
+			top: 50%
+			color: #ec7902
+			transform: translateY(-50%)
+			font-size: 20px
+.form
+	&__btn
+		font-size: 30px
+		color: #ffffff
+		padding: 8px 0
+		width: 100%
+		line-height: 1
+		margin-bottom: 5px
+		.small
+			display: block
+			font-size: 17px
