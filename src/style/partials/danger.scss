@@ -105,7 +105,8 @@
         position: absolute;
         bottom: -20px;
         left: calc(50% - 10px);
-        border: 10px solid transparent;	border-top: 10px solid #fbe7cb;
+        border: 10px solid transparent;
+        border-top: 10px solid #fbe7cb;
       }
     }
   }
@@ -134,24 +135,131 @@
 
 @media screen and (max-width: 1190px) {
   .danger {
-
+    &__joint {
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    &__progress {
+      font-size: 22px;
+      margin-top: 20px;
+    }
+    &__item {
+      width: 325px;
+      align-items: flex-start;
+      min-height: 640px;
+    }
+    &__text {
+      line-height: 1.3;
+      &--first {
+        font-size: 18px;
+        min-height: 155px;
+      }
+      &--second {
+        font-size: 17px;
+      }
+    }
+    &__pic {
+      &--quote {
+        font-size: 18px;
+      }
+    }
+    &__problem {
+      margin-top: 15px;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+    &__return {
+      margin-top: 30px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
   }
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 1023px) {
   .danger {
-
+    &__subtitle {
+      font-size: 18px;
+      & br {
+        display: none;
+      }
+    }
+    &__num {
+      font-size: 18px;
+      line-height: 1;
+      border-width: 4px;
+      width: 36px;
+      height: 36px;
+      margin-top: -18px;
+    }
+    &__progress {
+      font-size: 20px;
+    }
+    &__item {
+      padding-right: 10px;
+      padding-left: 10px;
+      width: 245px;
+    }
+    &__text {
+      &--first {
+        font-size: 16px;
+        min-height: 195px;
+      }
+      &--second {
+        font-size: 16px;
+      }
+    }
+    & .danger__pic {
+      &--quote {
+        font-size: 17px;
+      }
+    }
+    &__problem {
+      font-size: 18px;
+    }
+    &__return {
+      font-size: 20px;
+      & br {
+        display: none;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 767px) {
   .danger {
-
+    &__content {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: stretch;
+    }
+    &__progress {
+      margin-bottom: 0;
+    }
+    &__text {
+      &--first {
+        min-height: 135px;
+      }
+    }
+    &__item {
+      margin-top: 40px;
+      min-height: auto;
+      max-width: 300px;
+      width: 100%;
+    }
   }
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 639px) {
   .danger {
-
+    &__text {
+      &--first {
+        min-height:auto;
+      }
+    }
   }
 }
