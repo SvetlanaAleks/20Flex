@@ -1,0 +1,75 @@
+.header
+	background: url('../img/header__back.jpg') no-repeat center top
+	&__top
+		padding-top: 29px
+		display: flex
+		justify-content: flex-end
+		margin-bottom: 46px
+		.item
+			padding-left: 48px
+			position: relative
+			font-size: 18px
+			&:last-of-type
+				padding-left: 39px
+			+nlt
+				margin-right: 50px
+			.fico
+				position: absolute
+				left: 0
+				top: 0
+				color: #ec7902
+				&-header-icon-1
+					font-size: 35px
+				&-header-icon-2
+					font-size: 32px
+				&-header-icon-3
+					font-size: 30px
+		.link
+			color: $dark
+			border-bottom: 1px dashed #666768
+			line-height: 1.11
+			&:hover
+				border-bottom: none
+	&__main
+		display: flex
+		justify-content: flex-end
+		.info
+			max-width: 380px
+			.logo
+				max-width: 165px
+				width: 100%
+				margin-bottom: 27px
+			&__list
+				.item
+					font-size: 19px
+					position: relative
+					padding-left: 60px
+					+nlt
+						margin-bottom: 30px
+					&::after
+						content: ''
+						display: block
+						position: absolute
+						left: 0
+						top: 50%
+						width: 35px
+						height: 35px
+						transform: translateY(-50%)
+						background: #ec7902
+						border-radius: 50%
+						border: 5px solid white
+						// +sprite($check)
+				.text-semibold
+					display: block
+	&__title
+		text-align: left
+		font-size: 31px
+		line-height: 1.03
+		color: #222222
+		margin-bottom: 31px
+	.text
+		font-size: 20px
+		color: $dark
+		line-height: 1.2
+		font-style: italic
+		margin-bottom: 30px
