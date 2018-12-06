@@ -1,0 +1,474 @@
+@import "partials/params";
+@import "partials/mixins";
+
+
+.block10 {
+  & .quote__el {
+    font-family: "Arial";
+    color: #fca704;
+    font-size: 72px;
+    font-weight: 400;
+  }
+  &__content {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
+  }
+  & .content__item {
+    margin-top: 30px;
+    width: 370px;
+    outline: none;
+    margin-right: 30px;
+    border: 1px solid #cee0f0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    &.active {
+      & .item__text {
+        max-height: none;
+      }
+      & .text__open::before {
+        display: none;
+      }
+    }
+  }
+  & .slick-prev:before,
+  & .slick-next:before{
+    display: none;
+  }
+  & .slick-prev {
+    left: -55px;
+  }
+  & .slick-next {
+    right: -55px;
+  }
+  & .slick-prev, & .slick-next {
+    height: 25px;
+    width: 25px;
+    background-image: url('../img/arrow__slider.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    background-color: #fe7c2c;
+    border-radius: 50%;
+  }
+  & .slick-next {
+    transform: scale(-1, 1);
+  }
+  & .item__text {
+    max-height: 180px;
+    overflow: hidden;
+  }
+
+  & .text__open {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #73ad32;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #f96308 0%, #692faf 100%);
+    position: relative;
+    bottom: -15px;
+    &::after {
+      content: '';
+      width: 14px;
+      height: 2px;
+      background-color: #ffffff;
+      position: absolute;
+      top: calc(50% - 1px);
+      left: calc(50% - 7px);
+    }
+    &::before {
+      content: '';
+      height: 14px;
+      width: 2px;
+      background-color: #ffffff;
+      position: absolute;
+      left: calc(50% - 1px);
+      top: calc(50% - 7px);
+    }
+  }
+  & .item__foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -23px;
+    & img {
+      border: 3px solid #e97502;
+      border-radius: 50%;
+      background-color: #e97502;
+      width: 110px;
+      height: 110px;
+    }
+  }
+  & .foto__img-do {
+    position: relative;
+    right: -7px;
+    z-index: 2;
+  }
+  & .foto__img-posle {
+    position: relative;
+    z-index: 3;
+    left: -7px;
+  }
+  & .foto__do,
+  & .foto__posle {
+    font-size: 14px;
+
+    font-weight: 500;
+    text-transform: lowercase;
+  }
+  & .foto__do {
+    color: #e16a1f;
+  }
+  & .foto__posle {
+    color: #70b228;
+  }
+  & .item__auth {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 16px;
+  }
+  & .item__quote {
+    margin-top: 18px;
+    padding: 25px;
+    font-size: 17px;
+    font-style: italic;
+    color: #444444;
+    width: 100%;
+    background-color: #eaf2f9;
+    position: relative;
+  }
+  & .quote__el {
+    position: absolute;
+    top: -21px;
+    left: calc(50% - 20px);
+  }
+  & .item__text {
+    margin-top: 10px;
+    line-height: 26px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  &__subtitle {
+    font-size: 18px;
+    color: #444444;
+    font-weight: 400;
+    margin-top: 36px;
+    line-height: 28px;
+  }
+  &__review {
+    width: 100%;
+    border: 1px solid #cee0f0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin-top: 29px;
+  }
+  & .input__val {
+    background-color: #eff4fa;
+    outline: none;
+    padding-left: 55px;
+    padding-right: 10px;
+    color: #666666;
+    border: none;
+    height: 65px;
+    border-radius: 30px;
+    width: 220px;
+    &:hover,
+    &:focus {
+      box-shadow: inset 1px 1px 3px #f3f3;
+    }
+  }
+  & .input__val::-webkit-input-placeholder { color: #666; font-weight: 500; }
+  & .input__val::-moz-placeholder          { color: #666; font-weight: 500; } /* Firefox 19+ */
+  & .input__val:-moz-placeholder           { color: #666; font-weight: 500; } /* Firefox 18- */
+  & .input__val:-ms-input-placeholder      { color: #666; font-weight: 500; }
+  & .input__text {
+    width: 360px;
+    padding-right: 40px;
+    padding-left: 20px;
+  }
+  & .answer__file {
+    display: none;
+  }
+  & .answer__plus {
+    position: absolute;
+    width: 14px;
+    height: 27px;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+  }
+  & .answer__input-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  & .input__tel {
+    background-image: url('../img/tel.svg');
+    background-repeat: no-repeat;
+    background-position: center left 21px;
+  }
+  & .input__name {
+    background-image: url('../img/people.svg');
+    background-repeat: no-repeat;
+    background-position: center left 22px;
+  }
+  & .btn {
+    font-size: 28px;
+  }
+  &__reviews {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+}
+.audio-reviews-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.block9__audio-comm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+.block9__audio-comm .audio-reviews-item {
+  border: none;
+  margin: 0 32px 0 0;
+  text-align: left;}
+.block9__audio-comm .audio-reviews-item .audio-reviews-title {
+  display: inline-block;
+  position: relative;
+  bottom: 12px;
+  left: 40px;
+  color: #000000;
+  font-size: 17px;
+}
+.block9__audio-comm .audio-reviews-item .audiojs {
+  height: 41px;
+  max-width: 365px; }
+.block9__audio-comm .audio-reviews-item .audiojs .play-pause {
+  width: 30px;
+  height: 39px;
+  top: 3px;
+  left: 0;
+  padding: 4px 0px; }
+.block9__audio-comm .audio-reviews-item .audiojs .scrubber {
+  top: 17px;
+  background: #f2c5af !important;
+  left: 42px;
+  max-width: 220px; }
+.block9__audio-comm .audio-reviews-item .audiojs .time {
+  float: right;
+  line-height: normal;
+  text-shadow: none;
+  font-size: 13px;
+  color: #666666; }
+.block9__audio-comm .audio-reviews-item .audiojs .progress {
+  background: #fd7532; }
+.block9__audio-comm .audio-reviews-item .audiojs .loaded {
+  background: #f2c5af; }
+@media screen and (max-width: 1300px) {
+  .block10 {
+    &__content {
+      width: 940px;
+    }
+    & .content__item {
+      width: 300px;
+      margin-right: 20px;
+    }
+    & .item__quote {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    & .slick-prev {
+      left: -35px;
+    }
+    & .slick-next {
+      right: -35px;
+    }
+    & .item__text {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+@media screen and (max-width: 1179px) {
+  .block10 {
+    & .input__val {
+      width: 200px;
+    }
+    & .input__text {
+      width: 300px;
+    }
+  }
+  .block9__audio-comm .audio-reviews-item .audiojs {
+    max-width: 100%;
+  }
+  .block9__audio-comm .audio-reviews-item {
+    margin: 0;
+    max-width: 30%;
+  }
+  .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
+    max-width: 55%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .block10 {
+    &__content {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 620px;
+    }
+
+    & .content__item {
+      width: 300px;
+      margin-right: 20px;
+    }
+    & .item__auth {
+      font-size: 18px;
+    }
+    & .item__quote {
+      font-size: 15px;
+      padding: 10px;
+    }
+    & .quote__el {
+      font-size: 60px;
+    }
+    & .item__text {
+      line-height: 1.3;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    &__subtitle {
+      margin-top: 30px;
+      font-size: 16px;
+      br {
+        display: none;
+      }
+    }
+    &__review {
+      margin-top: 25px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    & .input__val {
+      width: calc(50% - 10px);
+      margin-bottom: 15px;
+    }
+    & .answer__input-wrapper {
+      width: calc(100% - 250px);
+    }
+    & .input__text {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+  .block10 .reviews__title {
+    font-size: 28px;
+  }
+  .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .block10 {
+      &__content {
+        width: 300px;
+      }
+
+      & .content__item {
+        width: 300px;
+        margin-right: 0;
+      }
+    & .slick-prev {
+      left: 10px;
+      top: 145px;
+      z-index: 10;
+    }
+    & .slick-next {
+      top: 133px;
+      right: 10px;
+      z-index: 10;
+    }
+    &__subtitle {
+      margin-top: 15px;
+    }
+  }
+  .block9__audio-comm .audio-reviews-item .audiojs .scrubber,
+  .block9__audio-comm .audio-reviews-item .audio-reviews-title {
+    left: 30px;
+  }
+  .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
+    max-width: 33%;
+  }
+  .block10 .reviews__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .block10 {
+    &__review {
+      max-width: 400px;
+      flex-direction: column;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    & .answer__input-wrapper {
+      width: calc(100%);
+      margin-bottom: 15px;
+    }
+    &__content {
+      width: 100%;
+      max-width: 400px;
+    }
+    & .content__item {
+      width: 100%;
+      max-width: 400px;
+    }
+    & .input__val {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    & .input__text {
+      margin-bottom: 0;
+    }
+  }
+  .audio-reviews-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .block9__audio-comm .audio-reviews-item {
+    width: 100%;
+    max-width: 300px;
+  }
+  .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
+    max-width: 57%;
+  }
+  .block10 .reviews__title {
+    font-size: 20px;
+  }
+}
