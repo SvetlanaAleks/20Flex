@@ -59,31 +59,33 @@
          <span>Верните здоровье,</span> чтобы проводить каждый день своей жизни, занимаясь любимым делом с любимыми
          людьми!
       </h3>
-      <form action="/submit" method="post" class="x_order_form benefits__form">
-         <div class="price">
-            <div class="old">
-               <p class="old__text">Старая цена</p>
-               <p class="text-nowrap"> <span class="old__value x_price_previous">1980</span><span class="old__current x_currency">руб</span></p>
+      <div class="form-wrap">
+         <form action="/submit" method="post" class="x_order_form benefits__form">
+            <div class="price">
+               <div class="old">
+                  <p class="old__text">Старая цена</p>
+                  <p class="text-nowrap"> <span class="old__value x_price_previous">1980</span><span class="old__current x_currency">руб</span></p>
+               </div>
+               <div class="new">
+                  <p class="new__text">Новая цена</p>
+                  <p class="text-nowrap">
+                     <span class="new__value x_price_current">990</span>
+                     <span class="new__current x_currency">руб</span><span class="note">*</span>
+                  </p>
+               </div>
             </div>
-            <div class="new">
-               <p class="new__text">Новая цена</p>
-               <p class="text-nowrap">
-                  <span class="new__value x_price_current">990</span>
-                  <span class="new__current x_currency">руб</span><span class="note">*</span>
-               </p>
+            <div class="input-wrap">
+               <i class="fico fico-name"></i>
+               <input class="input" type="text" name="name" placeholder="Мое имя" required="" autocomplete="name" />
             </div>
-         </div>
-         <div class="input-wrap">
-            <i class="fico fico-name"></i>
-            <input class="input" type="text" name="name" placeholder="Мое имя" required="" autocomplete="name" />
-         </div>
-         <div class="input-wrap">
-            <i class="fico fico-tel"></i><input class="input" type="tel" name="phone" placeholder="Мой телефон"
-               required="" autocomplete="tel" />
-         </div>
-         <button type="submit" class="btn benefits__btn text-bold">
-            Заказать <small class="small">co скидкой</small>
-         </button>
-      </form>
+            <div class="input-wrap">
+               <i class="fico fico-tel"></i><input class="input" type="tel" name="phone" placeholder="Мой телефон"
+                  required="" autocomplete="tel" />
+            </div>
+            <button type="submit" class="btn benefits__btn text-bold">
+               Заказать <small class="small">co скидкой</small>
+            </button>
+         </form>
+      </div>
    </div>
 </section>
