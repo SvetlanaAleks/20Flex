@@ -1,8 +1,5 @@
-@import "partials/params";
-@import "partials/mixins";
 
-
-.block10 {
+.reviews {
   & .quote__el {
     font-family: "Arial";
     color: #fca704;
@@ -290,7 +287,7 @@
 .block9__audio-comm .audio-reviews-item .audiojs .loaded {
   background: #f2c5af; }
 @media screen and (max-width: 1300px) {
-  .block10 {
+  .reviews {
     &__content {
       width: 940px;
     }
@@ -315,7 +312,7 @@
   }
 }
 @media screen and (max-width: 1179px) {
-  .block10 {
+  .reviews {
     & .input__val {
       width: 200px;
     }
@@ -335,7 +332,7 @@
   }
 }
 @media screen and (max-width: 1023px) {
-  .block10 {
+  .reviews {
     &__content {
       margin-top: 30px;
       width: 100%;
@@ -387,7 +384,7 @@
       width: 100%;
     }
   }
-  .block10 .reviews__title {
+  .reviews .reviews__title {
     font-size: 28px;
   }
   .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
@@ -395,7 +392,7 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .block10 {
+  .reviews {
       &__content {
         width: 300px;
       }
@@ -425,12 +422,12 @@
   .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
     max-width: 33%;
   }
-  .block10 .reviews__title {
+  .reviews .reviews__title {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 639px) {
-  .block10 {
+  .reviews {
     &__review {
       max-width: 400px;
       flex-direction: column;
@@ -468,7 +465,68 @@
   .block9__audio-comm .audio-reviews-item .audiojs .scrubber {
     max-width: 57%;
   }
-  .block10 .reviews__title {
+  .reviews .reviews__title {
     font-size: 20px;
+  }
+}
+
+.popup__review {
+  display: none;
+  &.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+  & .review__inner {
+    text-align: center;
+    width: 600px;
+    height: 90px;
+    position: absolute;
+    top: calc(50% - 45px);
+    left: calc(50% - 300px);
+    background-color: #fff;
+    color: #444444;
+    z-index: 11;
+    padding: 10px;
+  }
+  & .close {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    line-height: 1;
+  }
+  & .review__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  & .review__p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 639px){
+  .popup__review {
+    & .review__inner {
+      width: 300px;
+      height: 115px;
+      top: calc(50% - 115px / 2);
+      left: calc(50% - 150px);
+    }
+    & .review__title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    & .review__p {
+      font-size: 16px;
+    }
   }
 }
