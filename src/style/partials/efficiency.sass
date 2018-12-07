@@ -5,6 +5,7 @@
 .efficiency
 	background: url('../img/efficiency__back.png') no-repeat center top
 	padding-top: 130px
+	background-size: cover
 	&__title
 		margin-bottom: 18px
 		+r(1023)
@@ -23,8 +24,15 @@
 		margin-bottom: 45px
 		+r(1023)
 			margin-bottom: 25px
+		+r(639)
+			flex-direction: column
 		.center
 			position: relative
+			img
+				+r(639)
+					width: 250px
+			+r(639)
+				order: -1
 			&__dot
 				position: absolute
 				width: 16px
@@ -39,31 +47,59 @@
 					+r(1023)
 						top: 103px
 						left: 83px
+					+r(767)
+						top: 85px
+						left: 79px
+					+r(639)
+						top: 69px
 				&-2
 					top: 201px
 					left: 51px
 					+r(1023)
 						top: 151px
 						left: 35px
+					+r(767)
+						left: 30px
+						top: 127px
 				&-3
 					left: 156px
 					top: 106px
 					+r(1023)
 						left: 120px
 						top: 36px
+					+r(767)
+						left: 99px
+						top: 26px
+					+r(639)
+						left: 118px
 				&-4
 					top: 200px
 					right: 101px
 					+r(1023)
 						top: 172px
 						right: 84px
+					+r(767)
+						top: 136px
+						right: 66px
+					+r(639)
+						top: 163px
+						right: 83px
 		.col
+			+r(639)
+				display: block
+				width: 100%
+				+nlt
+					margin-bottom: 15px
 			&__item
 				text-align: center
 				max-width: 370px
 				position: relative
 				+r(1023)
 					max-width: 310px
+				+r(639)
+					max-width: 100%
+					&::after, &::before
+						display: none
 				&::after
 					content: ''
 					display: block
@@ -89,6 +125,8 @@
 							right: -3px
 						+r(1023)
 							right: -3px
+						+r(767)
+							right: -23px
 					&::before
 						transform: rotate(48deg)
 						top: 59px
@@ -103,6 +141,10 @@
 							transform: rotate(66deg)
 							right: -212px
 							width: 209px
+						+r(767)
+							transform: rotate(73deg)
+							right: -253px
+							width: 230px
 				&-2
 					&::after
 						right: 8px
@@ -111,6 +153,8 @@
 							right: -3px
 						+r(1023)
 							right: -3px
+						+r(767)
+							right: -23px
 					&::before
 						transform: rotate(-13deg)
 						top: 59px
@@ -123,6 +167,9 @@
 							width: 72px
 						+r(1023)
 							transform: rotate(-46deg)
+						+r(767)
+							transform: rotate(-73deg)
+							right: -94px
 				&-3
 					&::after
 						left: 8px
@@ -131,6 +178,9 @@
 							left: -3px
 						+r(1023)
 							left: -3px
+						+r(767)
+							width: 38px
+							right: -23px
 					&::before
 						transform: rotate(-39deg)
 						top: 59px
@@ -145,6 +195,10 @@
 							transform: rotate(-45deg)
 							left: -182px
 							width: 179px
+						+r(767)
+							transform: rotate(-59deg)
+							left: -184px
+							width: 182px
 				&-4
 					&::after
 						left: 8px
@@ -153,6 +207,9 @@
 							left: -3px
 						+r(1023)
 							left: -3px
+						+r(767)
+							right: -23px
+							width: 37px
 					&::before
 						transform: rotate(9deg)
 						top: 59px
@@ -165,6 +222,10 @@
 						+r(1023)
 							left: -99px
 							width: 97px
+						+r(767)
+							left: -89px
+							width: 86px
+							transform: rotate(22deg)
 				&:nth-of-type(odd)
 					margin-bottom: 15px
 				.item-pick
@@ -201,9 +262,9 @@
 			width: 300px
 			display: block
 			margin: auto
-		// +r(320)
-		// 	width: 280px
-		// 	box-shadow: 30px 3px 0 -18px #c7e0e3, -30px 11px 0px -19px #c7e0e3
+		+r(380)
+			width: 280px
+			box-shadow: 30px 3px 0 -18px #c7e0e3, -30px 11px 0px -19px #c7e0e3
 		.price
 			border-bottom: none
 			margin-bottom: 0
@@ -230,6 +291,8 @@
 		+r(1023)
 			width: 100%
 			font-size: 24px
+		+r(380)
+			font-size: 22px
 		.small
 			display: block
 			font-size: 17px
