@@ -1,0 +1,98 @@
+.experts
+	padding-top: 70px
+	padding-bottom: 50px
+	&__title
+		line-height: 0.96
+		margin-bottom: 18px
+	&__desc
+		font-size: 22px
+		text-align: center
+		margin-bottom: 59px
+	.name-wrap
+		display: flex
+		justify-content: center
+		margin-bottom: 48px
+		.name
+			width: 390px
+			max-width: 100%
+			border-radius: 50px
+			border: 2px solid #c7e0e3
+			padding: 16px 94px
+			&--active
+				border: 2px solid #ec7902
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -18px
+					border: 10px solid transparent
+					border-top: 10px solid #fff
+				&::before
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -20px
+					border: 10px solid transparent
+					border-top: 10px solid #ec7902
+				.name__text
+					color: black
+					font-weight: 600
+			+nlt
+				margin-right: 20px
+			&__text
+				font-size: 22px
+				color: #666666
+	.comment
+		display: flex
+		align-items: flex-start
+		&__photo
+			text-align: center
+			margin-right: 100px
+			.photo
+				margin-bottom: 15px
+			.name
+				font-size: 22px
+				font-weight: 600
+			.city
+				background: url('../img/back_expert.png') no-repeat center
+				width: 171px
+				height: 75px
+				line-height: 75px
+				display: block
+				background-size: cover
+				margin: auto
+				font-size: 20px
+				font-weight: 600
+				color: white
+				font-style: italic
+		&__text
+			align-self: flex-end
+			padding: 30px 40px 30px 40px
+			border-radius: 10px
+			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05)
+			border: 1px solid #e1ebec
+			width: 662px
+			max-width: 100%
+			position: relative
+			background-color: white
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: -11px
+				right: -11px
+				border: 1px solid #c7e0e3
+				border-radius: 10px 0 10px 0
+				width: 100%
+				height: 100%
+				z-index: -2
+				background-color: #f6fcfd
+			.text
+				font-size: 20px
+				line-height: 1.4
+				color: #444444
+				+nlt
+					margin-bottom: 28px
