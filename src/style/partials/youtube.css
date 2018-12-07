@@ -43,10 +43,7 @@
     background-position: center center;
     transition: all 0.5s ease 0s;
 }
-.youtube .play:hover {
-    background: url("../img/playy1.png");
-    transition: all 0.5s ease 0s;
-}
+
 .video-wrap iframe {
     border: none;
 }
