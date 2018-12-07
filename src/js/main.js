@@ -1,9 +1,13 @@
 //=require ../../node_modules/slick-carousel/slick/slick.min.js
 //=require ../../node_modules/object-fit-images/dist/ofi.min.js
 
+
 //=require partials/app.js
+//=require partials/use.js
+
 
 $(function () {
+
     objectFitImages()
 });
 
@@ -83,4 +87,11 @@ $('.answer__file').on('change', function () {
     var filesName = name[name.length - 1];
     // $('.file-name').text('Hoi');
     alert('Ваш файл ' + filesName + ' загружен');
+
+});
+
+
+$(document).ready(function () {
+   App.init();
+
 });
