@@ -22,8 +22,7 @@ $('.reviews__slider').slick({
     prevArrow: $('.reviews__prev'),
     nextArrow: $('.reviews__next'),
 
-    responsive: [
-        {
+    responsive: [{
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
@@ -92,6 +91,6 @@ $('.answer__file').on('change', function () {
 
 
 $(document).ready(function () {
-   App.init();
+    App.init();
 
 });
