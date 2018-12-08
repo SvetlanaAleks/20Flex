@@ -129,6 +129,15 @@
     }
   }
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    max-width: 330px;
+    height: 65px;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 20px;
   }
 }

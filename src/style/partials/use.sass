@@ -4,12 +4,26 @@
 	color: #4799b9
 .use
 	padding-top: 100px
+	+r(1199)
+		padding-top: 40px
 	&__title
 		margin-bottom: 17px
+		+r(1023)
+			max-width: 500px
+		+r(767)
+			max-width: 400px 
 	&__desc
 		font-size: 22px
 		text-align: center
 		margin-bottom: 36px
+		+r(1199)
+			margin-bottom: 20px
+		+r(767)
+			max-width: 500px
+			margin: auto
+			margin-bottom: 20px
+		+r(639)
+			font-size: 20px
 	&__text
 		padding: 13px 60px
 		border: 1px solid #4799b9
@@ -19,6 +33,12 @@
 		width: 100%
 		position: relative
 		margin-bottom: 24px
+		+r(1023)
+			padding: 13px 22px
+		+r(639)
+			font-size: 18px
+		+r(479)
+			font-size: 17px
 		&::after
 			content: ''
 			position: absolute
@@ -42,6 +62,14 @@
 			font-size: 22px
 	.img-wrap
 		position: relative
+		+r(1199)
+			width: 190px
+		+r(1023)
+			order: -1
+		+r(639)
+			width: 150px
+		+r(479)
+			margin-bottom: 20px
 		&::before
 			content: ''
 			display: block
@@ -49,6 +77,8 @@
 			left: -77px
 			bottom: 0
 			+sprite($use-before)
+			+r(639)
+				bottom: -15px
 		&::after
 			content: ''
 			display: block
@@ -56,29 +86,69 @@
 			right: -123px
 			bottom: -15px
 			+sprite($use-after)
+			+r(1199)
+				transform: scale(.9)
+			+r(639)
+				transform: scale(.7)
+			+r(479)
+				right: -113px
 	&__content
 		display: flex
 		justify-content: space-between
 		align-items: center
+		+r(1023)
+			flex-direction: column
+			margin-bottom: 15px
 		.col
+			+r(1023)
+				display: flex
+				align-items: flex-start
+			+r(639)
+				justify-content: space-between
+			+r(479)
+				display: block
+				width: 100%
 			&__item
 				position: relative
 				text-align: center
 				max-width: 370px
 				padding-bottom: 21px
+				// +r(1023)
+				// 	padding-top: 15px
+				+r(639)
+					width: 49%
+				+r(479)
+					width: 100%
+					max-width: 100%
+					padding-bottom: 0
+					&:nth-of-type(even)
+						margin-bottom: 25px
+					&:last-of-type
+						margin-bottom: 15px
 				&:nth-of-type(odd)
 					margin-bottom: 25px
 				.item-pick
 					margin-bottom: 15px
+					width: 175px
+					height: 120px
+					+r(639)
+						margin-bottom: 10px
 				.ttl
 					font-size: 22px
 					font-weight: 600
 					color: #0f0f0f
 					margin-bottom: 20px
+					+r(639)
+						font-size: 20px
+						margin-bottom: 12px
 				.text
 					font-size: 18px
 					color: #444444
 					line-height: 1.3
+					+r(639)
+						br
+							display: none
+						font-size: 16px
 			.button
 				position: absolute
 				bottom: 0
@@ -89,6 +159,8 @@
 			.text-over
 				height: 112px
 				overflow: hidden
+				+r(479)
+					height: auto
 				&--full
 					height: auto
 					&~.button
@@ -108,6 +180,8 @@
 	cursor: pointer
 	outline: none
 	background: none
+	+r(479)
+		display: none
 	&--plus
 		border: 1px solid #ec7902
 		color: #ec7902
@@ -163,6 +237,8 @@
 		width: 363px
 		height: 979px
 		z-index: -1
+		+r(1199)
+			display: none
 	&::before
 		content: ''
 		display: block
@@ -173,6 +249,8 @@
 		width: 363px
 		height: 979px
 		z-index: -1
+		+r(1199)
+			display: none
 	.center
 		text-align: center
 	&__btn
@@ -185,6 +263,11 @@
 		border-bottom: 5px solid #4699b9
 		box-shadow: 0 12px 23px -15px #4699b9
 		margin-bottom: 50px
+		+r(1023)
+			margin-bottom: 30px
+		+r(479)
+			width: 280px
+			font-size: 25px
 		&:hover
 			background: linear-gradient(to left, #59aaca, #82d7ee 50%, #59aaca)
 		.small
@@ -194,3 +277,7 @@
 		text-align: center
 		font-size: 24px
 		font-weight: 600
+		+r(1023)
+			font-size: 22px
+		+r(479)
+			font-size: 18px
