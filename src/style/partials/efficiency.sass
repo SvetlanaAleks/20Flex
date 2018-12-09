@@ -14,13 +14,13 @@
 		text-align: center
 		font-size: 22px
 		color: #222222
-		margin-bottom: 9px
+		margin-bottom: 24px
 		+r(1023)
 			font-size: 20px
 	&__content
 		display: flex
 		justify-content: space-between
-		align-items: center
+		align-items: flex-start
 		margin-bottom: 45px
 		+r(1023)
 			margin-bottom: 25px
@@ -28,6 +28,7 @@
 			flex-direction: column
 		.center
 			position: relative
+			align-self: center
 			img
 				+r(639)
 					width: 250px
@@ -39,7 +40,7 @@
 				height: 16px
 				border-radius: 50%
 				background: #86ac13
-				box-shadow: 0 0 0 5px #b9cf76, 0 0 0 10px rgba(#86ac13, .3)
+				box-shadow: 0 0 0 5px rgba(135, 172, 19, .4), 0 0 0 10px rgba(#86ac13, .3)
 				z-index: 2
 				&-1
 					top: 136px
@@ -105,7 +106,7 @@
 					display: block
 					position: absolute
 					width: 100px
-					height: .1rem
+					height: .0625rem
 					background: #87ac13
 					+r(1023)
 						width: 60px
@@ -114,7 +115,7 @@
 					display: block
 					position: absolute
 					background: #87ac13
-					height: .1rem
+					height: .0625rem
 					width: 200px
 					z-index: 1
 				&-1
@@ -131,8 +132,8 @@
 						transform: rotate(48deg)
 						top: 59px
 						transform-origin: 0 0
-						right: -266px
-						width: 274px
+						right: -251px
+						width: 259px
 						+r(1199)
 							transform: rotate(62deg)
 							right: -237px
@@ -156,20 +157,21 @@
 						+r(767)
 							right: -23px
 					&::before
-						transform: rotate(-13deg)
+						transform: rotate(-9deg)
 						top: 59px
 						transform-origin: 0 0
 						right: -114px
 						width: 123px
 						+r(1199)
-							transform: rotate(-18deg)
-							right: -75px
-							width: 72px
+							transform: rotate(-12deg)
+							right: -56px
+							width: 54px
 						+r(1023)
 							transform: rotate(-46deg)
 						+r(767)
-							transform: rotate(-73deg)
-							right: -94px
+							transform: rotate(-68deg)
+							right: -68px
+							width: 46px
 				&-3
 					&::after
 						left: 8px
@@ -182,15 +184,15 @@
 							width: 38px
 							right: -23px
 					&::before
-						transform: rotate(-39deg)
+						transform: rotate(-37deg)
 						top: 59px
 						transform-origin: 100% 100%
-						left: -270px
-						width: 279px
+						left: -257px
+						width: 265px
 						+r(1199)
-							transform: rotate(-54deg)
-							left: -232px
-							width: 229px
+							transform: rotate(-51deg)
+							left: -217px
+							width: 215px
 						+r(1023)
 							transform: rotate(-45deg)
 							left: -182px
@@ -211,7 +213,7 @@
 							right: -23px
 							width: 37px
 					&::before
-						transform: rotate(9deg)
+						transform: rotate(7deg)
 						top: 59px
 						transform-origin: 100% 100%
 						left: -161px
@@ -222,6 +224,7 @@
 						+r(1023)
 							left: -99px
 							width: 97px
+							transform: rotate(4deg)
 						+r(767)
 							left: -89px
 							width: 86px
@@ -229,18 +232,18 @@
 				&:nth-of-type(odd)
 					margin-bottom: 15px
 				.item-pick
-					margin-bottom: 15px
+					margin-bottom: 7px
 					+r(1023)
 						width: 150px
-						margin-bottom: 10px
+						margin-bottom: 5px
 				.ttl
 					font-size: 22px
 					font-weight: 600
 					color: #0f0f0f
-					margin-bottom: 20px
+					margin-bottom: 11px
 					+r(1023)
 						font-size: 20px
-						margin-bottom: 15px
+						margin-bottom: 10px
 				.text
 					font-size: 18px
 					color: #444444
@@ -249,6 +252,8 @@
 						font-size: 16px
 						br
 							display: none
+	.form-wrap
+		padding: 0 20px
 	&__form
 		display: flex
 		background-color: #f6fcfd
