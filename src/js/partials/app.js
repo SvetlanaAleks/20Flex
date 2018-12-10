@@ -13,4 +13,4 @@ $('.another__benefit , .another__limitation').click(function(){
 
 $('.stat__info').mCustomScrollbar({
     axis: 'y'
-})
+});

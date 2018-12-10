@@ -1,0 +1,270 @@
+.experts
+	padding-top: 70px
+	padding-bottom: 50px
+	&__title
+		line-height: 0.96
+		margin-bottom: 18px
+
+		+r(767)
+			margin-bottom: 12px
+		+r(639)
+			br
+				display: none
+	&__desc
+		font-size: 22px
+		text-align: center
+		margin-bottom: 59px
+		+r(1199)
+			margin-bottom: 40px
+		+r(1023)
+			margin-bottom: 20px
+			font-size: 20px
+		+r(767)
+			font-size: 18px
+		+r(639)
+			font-size: 16px
+	.name-wrap
+		display: flex
+		justify-content: center
+		margin-bottom: 48px
+		+r(1199)
+			margin-bottom: 35px
+		+r(639)
+			margin-bottom: 20px
+		+r(479)
+			display: block
+		.name
+			max-width: 390px
+			width: 100%
+			border-radius: 29px
+			border: 2px solid #c7e0e3
+			padding: 16px 15px
+			font-size: 22px
+			color: #666666
+			text-align: right
+			cursor: pointer
+			+unselectable
+			+nlt
+				margin-right: 20px
+				+r(479)
+					margin-right: 0
+					margin: auto
+					margin-bottom: 10px
+			+r(1023)
+				font-size: 20px
+				max-width: 370px
+			+r(767)
+				font-size: 18px
+			+r(639)
+				font-size: 16px
+			+r(479)
+				margin: auto
+			.icon-1
+				margin-right: 75px
+				position: relative
+				+r(1199)
+					margin-right: 65px
+				+r(767)
+					margin-right: 0
+					text-align: center
+				+r(639)
+					margin-right: 15px
+					text-align: right
+				+r(479)
+					text-align: center
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 77px
+					top: 50%
+					transform: translateY(-50%)
+					+sprite($flag-1-bl)
+					+r(767)
+						left: 0
+			.icon-2
+				margin-right: 57px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 64px
+					top: 50%
+					transform: translateY(-50%)
+					+sprite($flag-2-bl)
+					+r(767)
+						left: 0
+				+r(1199)
+					margin-right: 52px
+				+r(767)
+					margin-right: 40px
+				+r(639)
+					margin-right: 0
+					text-align: right
+				+r(479)
+					text-align: center
+			&--active
+				color: black
+				font-weight: 600
+				border: 2px solid #ec7902
+				position: relative
+				+r(479)
+					&::after, &::before
+						display: none
+				.icon-1
+					&::after
+						+sprite($flag-1)
+				.icon-2
+					&::after
+						+sprite($flag-2)
+				&::after
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -10px
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 12px 14.5px 0 14.5px
+					border-color: #ffffff transparent transparent transparent
+				&::before
+					content: ''
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -12px
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 12px 14.5px 0 14.5px
+					border-color: #ec7902 transparent transparent transparent
+
+	.comment-wrap
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 38px
+			right: -9px
+			border: 1px solid #c7e0e3
+			background: #f2f8f9
+			border-radius: 25px 0
+			width: 98%
+			height: 75%
+			z-index: -2
+		+r(1199)
+			&::before
+				width: 100%
+				height: 100%
+				top: -10px
+		+r(479)
+			&::before
+				display: none
+	.comment
+		display: none
+		+r(1199)
+			align-items: center
+		&--active
+			display: flex
+			+r(639)
+				display: block
+		&__photo
+			text-align: center
+			margin-right: 100px
+			+r(1199)
+				margin-right: 40px
+			+r(767)
+				margin-right: 20px
+			+r(639)
+				width: 300px
+				margin-right: 0
+				margin: auto
+				margin-bottom: 20px
+			+r(479)
+				width: 250px
+				margin-bottom: 10px
+			.photo
+				margin-bottom: 15px
+			.name
+				font-size: 22px
+				font-weight: 600
+				+r(1023)
+					font-size: 19px
+			.city
+				background: url('../img/back_expert.png') no-repeat center
+				width: 171px
+				height: 75px
+				line-height: 70px
+				display: block
+				background-size: cover
+				margin: auto
+				font-size: 20px
+				font-weight: 600
+				color: white
+				font-style: italic
+				+r(1023)
+					font-size: 20px
+		&__text
+			margin-top: 50px
+			padding: 30px 40px 30px 40px
+			border-radius: 10px
+			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05)
+			border: 1px solid #e1ebec
+			max-width: 662px
+			width: 100%
+			position: relative
+			background-color: white
+			position: relative
+			+r(1199)
+				margin-top: 0
+			+r(1023)
+				padding: 20px
+				max-width: 591px
+			+r(639)
+				&::after, &::before
+					display: none
+			+r(479)
+				text-align: center
+				padding: 15px
+
+			&::after
+				content: ''
+				position: absolute
+				left: -30px
+				top: 31px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 30px 30px 0
+				border-color: transparent #fff transparent transparent
+			&::before
+				content: ''
+				position: absolute
+				left: -32px
+				top: 30px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 30px 30px 0
+				border-color: transparent #e1ebec transparent transparent
+			.text
+				font-size: 20px
+				line-height: 1.4
+				color: #444444
+				+r(1199)
+					margin-bottom: 17px
+					font-size: 19px
+					br
+						display: none
+				+r(1023)
+					font-size: 17px
+					margin-bottom: 10px
+				+r(639)
+					font-size: 16px
+				+nlt
+					margin-bottom: 28px
+					+r(1023)
+						margin-bottom: 15px
