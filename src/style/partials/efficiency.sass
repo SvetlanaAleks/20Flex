@@ -8,6 +8,19 @@
 	background-size: cover
 	&__title
 		margin-bottom: 18px
+		position: relative
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: -106px
+			left: 50%
+			transform: translateX(-50%)
+			width: 66px
+			height: 66px
+			background: url('../img/joint.png') no-reprat center top
+			+r(1023)
+				top: -66px
 		+r(1023)
 			margin-bottom: 12px
 	&__desc
@@ -163,9 +176,9 @@
 						right: -114px
 						width: 123px
 						+r(1199)
-							transform: rotate(-12deg)
-							right: -56px
-							width: 54px
+							transform: rotate(-29deg)
+							right: -73px
+							width: 70px
 						+r(1023)
 							transform: rotate(-46deg)
 						+r(767)
@@ -254,6 +267,8 @@
 							display: none
 	.form-wrap
 		padding: 0 20px
+		+r(479)
+			padding: 0
 	&__form
 		display: flex
 		background-color: #f6fcfd
