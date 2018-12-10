@@ -27,7 +27,7 @@
 	&__text
 		padding: 13px 60px
 		border: 1px solid #4799b9
-		border-radius: 50px
+		border-radius: 34.5px
 		max-width: 990px
 		margin: auto
 		width: 100%
@@ -44,17 +44,23 @@
 			position: absolute
 			left: 50%
 			transform: translateX(-50%)
-			bottom: -19px
-			border: 10px solid transparent
-			border-top: 10px solid #fff
+			bottom: -11px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 12px 14.5px 0 14.5px
+			border-color: #ffffff transparent transparent transparent
 		&::before
 			content: ''
 			position: absolute
 			left: 50%
 			transform: translateX(-50%)
-			bottom: -20px
-			border: 10px solid transparent
-			border-top: 10px solid #4799b9
+			bottom: -12px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 12px 14.5px 0 14.5px
+			border-color: #4799b9 transparent transparent transparent
 		.content
 			font-size: 19px
 			text-align: center
@@ -68,6 +74,7 @@
 			order: -1
 		+r(639)
 			width: 150px
+			margin-bottom: 25px
 		+r(479)
 			margin-bottom: 20px
 		&::before
@@ -112,9 +119,7 @@
 				position: relative
 				text-align: center
 				max-width: 370px
-				padding-bottom: 21px
-				// +r(1023)
-				// 	padding-top: 15px
+				padding-bottom: 36px
 				+r(639)
 					width: 49%
 				+r(479)
@@ -126,7 +131,12 @@
 					&:last-of-type
 						margin-bottom: 15px
 				&:nth-of-type(odd)
-					margin-bottom: 25px
+					margin-bottom: 9px
+					+r(480)
+						margin-bottom: 15px
+				&:nth-of-type(even)
+					+r(1023)
+						margin-bottom: 25px
 				.item-pick
 					margin-bottom: 15px
 					width: 175px
@@ -137,7 +147,7 @@
 					font-size: 22px
 					font-weight: 600
 					color: #0f0f0f
-					margin-bottom: 20px
+					margin-bottom: 9px
 					+r(639)
 						font-size: 20px
 						margin-bottom: 12px
@@ -153,12 +163,14 @@
 				position: absolute
 				bottom: 0
 				left: 50%
-				transform: translate(-50%, 50%)
+				transform: translate(-50%, 0)
 				&--minus
 					display: none
 			.text-over
-				height: 112px
+				height: 101px
 				overflow: hidden
+				+r(639)
+					height: 96px
 				+r(479)
 					height: auto
 				&--full
@@ -232,8 +244,8 @@
 		display: block
 		position: absolute
 		background: url('../img/use_back-left.png') no-repeat center left
-		top: 0
-		left: 0
+		top: 93px
+		left: 16px
 		width: 363px
 		height: 979px
 		z-index: -1
@@ -244,8 +256,8 @@
 		display: block
 		position: absolute
 		background: url('../img/use_back-right.png') no-repeat center right
-		right: 0
-		top: 0
+		right: 61px
+		top: 93px
 		width: 363px
 		height: 979px
 		z-index: -1
@@ -254,6 +266,8 @@
 	.center
 		text-align: center
 	&__btn
+		position: relative
+		top: -31px
 		width: 320px
 		font-size: 30px
 		color: #ffffff
@@ -262,9 +276,11 @@
 		background: linear-gradient(to right, #4699b9 1%, #67c4dd 51%, #4699b9)
 		border-bottom: 5px solid #4699b9
 		box-shadow: 0 12px 23px -15px #4699b9
-		margin-bottom: 50px
+		margin-bottom: 30px
 		+r(1023)
 			margin-bottom: 30px
+		+r(767)
+			position: static
 		+r(479)
 			width: 280px
 			font-size: 25px
@@ -279,5 +295,8 @@
 		font-weight: 600
 		+r(1023)
 			font-size: 22px
+		+r(767)
+			br
+				display: none
 		+r(479)
 			font-size: 18px
