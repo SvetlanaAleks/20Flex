@@ -2,7 +2,9 @@
 	padding-top: 40px
 	padding-bottom: 50px
 	position: relative
-	&::after 
+	+r(1199)
+		padding-top: 0
+	&::after
 		content: ''
 		display: block
 		position: absolute
@@ -10,7 +12,7 @@
 		background: url('../img/wave-top.png') no-repeat center top
 		height: 100px
 		width: 100%
-	&::before 
+	&::before
 		content: ''
 		display: block
 		position: absolute
@@ -18,6 +20,9 @@
 		background: url('../img/wave-bottom.png') no-repeat center bottom
 		height: 100px
 		width: 100%
+	+r(1023)
+		&::after, &::before
+			display: none
 	&__title
 		line-height: 0.96
 		margin-bottom: 18px

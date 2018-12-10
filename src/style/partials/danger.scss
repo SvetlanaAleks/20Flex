@@ -167,8 +167,11 @@
 
 @media screen and (max-width: 1190px) {
   .danger {
+    padding-top: 88px;
+
     &__joint {
       margin-bottom: 30px;
+      margin-top: -55px;
     }
 
     &__subtitle {
@@ -310,6 +313,11 @@
 
 @media screen and (max-width: 639px) {
   .danger {
+    &__joint {
+      margin-bottom: 8px;
+      margin-top: -41px;
+    }
+
     &__text {
       &--first {
         min-height: auto;

@@ -478,6 +478,10 @@
 
 @media screen and (max-width: 1023px) {
   .reviews {
+    &__joint {
+      margin-top: -60px;
+    }
+
     &__content {
       margin-top: 30px;
       width: 100%;
@@ -545,6 +549,10 @@
 
 @media screen and (max-width: 767px) {
   .reviews {
+    &__joint {
+      margin-top: -50px;
+    }
+
     &__content {
       width: 300px;
     }
@@ -591,6 +599,10 @@
 
 @media screen and (max-width: 639px) {
   .reviews {
+    &__joint {
+      margin-top: -45px;
+    }
+
     &__review {
 
       flex-direction: column;

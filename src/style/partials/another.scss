@@ -234,6 +234,12 @@
 
 
 // media
+@include r(1280) {
+	.another {
+		padding-bottom: 50px;
+	}
+}
+
 @include r(1199) {
 
 	.another__under {
@@ -292,6 +298,15 @@
 }
 
 @include r(1023) {
+	.another {
+		padding-top: 60px;
+	}
+
+	.another::after,
+	.another::before {
+		display: none;
+	}
+
 	.another__benefit-main {
 		display: none;
 	}
@@ -372,6 +387,8 @@
 }
 
 @include r(767) {
+
+
 
 	.another__under {
 		font-size: 19px;

@@ -185,6 +185,12 @@
 }
 
 @media screen and (max-width: 1023px) {
+
+  .order::after,
+  .order::before {
+    display: none;
+  }
+
   .order {
     &__content {
       justify-content: space-between;

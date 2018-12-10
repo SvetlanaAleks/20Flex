@@ -2,6 +2,9 @@
 	padding-top: 86px
 	position: relative
 	padding-bottom: 62px
+	+r(1023)
+		&::after, &::before
+			display: none
 	&::after 
 		content: ''
 		display: block

@@ -233,6 +233,9 @@
 }
 
 @include r(1023) {
+	.result::before {
+		display: none;
+	}
 
 	.result__under {
 		margin-bottom: 15px;
