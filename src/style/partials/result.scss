@@ -2,6 +2,18 @@
 .result {
 	padding: 100px 0;
 	background: #eef5f6 url(../img/bg-result.png) no-repeat center center;
+	position: relative;
+}
+
+.result::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -14px;
+	background: url('../img/wave-bottom.png') no-repeat center top;
+	height: 100px;
+	width: 100%;
+
 }
 
 .title-result {
@@ -23,6 +35,7 @@
 	position: relative;
 	z-index: 1;
 	margin-bottom: 45px;
+
 	&::before {
 		content: '';
 		width: 96%;
@@ -35,7 +48,8 @@
 		transform: translateX(-50%);
 		bottom: 47px;
 		z-index: -1;
-	}	
+	}
+
 	&::after {
 		content: '';
 		width: 100%;
@@ -61,7 +75,7 @@
 .result__img {
 	border: 7px solid #87ac13;
 	border-bottom: none;
-	
+
 	img {
 		display: block;
 	}
@@ -75,8 +89,9 @@
 	margin: 30px auto 0;
 	position: relative;
 	display: inline-block;
+
 	&::before {
-		content:'';
+		content: '';
 		width: 7px;
 		height: 7px;
 		border-radius: 50%;
@@ -95,8 +110,9 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	margin-bottom: 58px;
+
 	&::before {
-		content:'';
+		content: '';
 		width: 100%;
 		height: 1px;
 		background: #cdd7d0;
@@ -110,6 +126,7 @@
 	width: 270px;
 	text-align: center;
 	margin-right: 27px;
+
 	&:last-child {
 		margin-right: 0;
 	}
@@ -136,6 +153,7 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
+
 	&::before {
 		content: '';
 		width: 100%;
@@ -166,6 +184,7 @@
 	line-height: 1.1;
 	color: #444444;
 	margin-bottom: 10px;
+
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -199,17 +218,18 @@
 	}
 
 	.result__item {
-	    width: 250px;
-	    margin-right: 10px;
+		width: 250px;
+		margin-right: 10px;
 	}
 
 	.result__text {
 		font-size: 19px;
+
 		br {
 			display: none;
 		}
 	}
-	
+
 }
 
 @include r(1023) {
@@ -228,9 +248,11 @@
 
 	.result__wrap {
 		margin-bottom: 20px;
+
 		&::before {
 			bottom: 32px;
 		}
+
 		&::after {
 			bottom: 45px;
 		}
@@ -245,6 +267,7 @@
 
 	.result__item {
 		margin: 0 20px 20px;
+
 		&:last-child {
 			margin: 0 20px 20px;
 		}
@@ -257,7 +280,7 @@
 	.result__bottom-wrap {
 		padding: 5px 20px;
 	}
-	
+
 }
 
 @include r(767) {
@@ -282,6 +305,7 @@
 	.result__item {
 		width: 210px;
 		margin: 0 10px 20px;
+
 		&:last-child {
 			margin: 0 10px 20px;
 		}
@@ -304,6 +328,7 @@
 			width: 100%;
 			border-radius: 10px 0;
 		}
+
 		&::after {
 			display: none;
 		}
@@ -356,6 +381,7 @@
 
 	.result__sert {
 		margin: 0 15px 15px;
+
 		&:last-child {
 			margin-bottom: 0;
 		}

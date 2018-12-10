@@ -5,8 +5,24 @@
 	color: #ec7902
 
 .organs
-	padding: 100px 0
-
+	padding: 42px 0
+	position: relative
+	&::after 
+		content: ''
+		display: block
+		position: absolute
+		top: -80px
+		background: url('../img/wave-top.png') no-repeat center top
+		height: 100px
+		width: 100%
+	&::before 
+		content: ''
+		display: block
+		position: absolute
+		bottom: -56px
+		background: url('../img/wave-bottom.png') no-repeat center bottom
+		height: 100px
+		width: 100%
 .title-organs
 	max-width: 630px
 	margin-bottom: 28px
