@@ -18,16 +18,44 @@
 			border-radius: 29px
 			border: 2px solid #c7e0e3
 			padding: 16px 15px
-			text-align: center
 			font-size: 22px
 			color: #666666
+			text-align: right
 			cursor: pointer
 			+unselectable
+			.icon-1
+				margin-right: 76px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 77px
+					top: 50%
+					transform: translateY(-50%)
+					+sprite($flag-1-bl)
+			.icon-2
+				margin-right: 64px
+				position: relative
+				&::after
+					content: ''
+					display: block
+					position: absolute
+					left: 64px
+					top: 50%
+					transform: translateY(-50%)
+					+sprite($flag-2-bl)
 			&--active
 				color: black
 				font-weight: 600
 				border: 2px solid #ec7902
 				position: relative
+				.icon-1
+					&::after
+						+sprite($flag-1)
+				.icon-2
+					&::after
+						+sprite($flag-2)
 				&::after
 					content: ''
 					position: absolute
@@ -47,10 +75,25 @@
 
 			+nlt
 				margin-right: 20px
-
+	.comment-wrap
+		position: relative
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 38px
+			right: -9px
+			border: 1px solid #c7e0e3
+			background: #f2f8f9
+			border-radius: 25px 0
+			width: 98%
+			height: 90%
+			z-index: -2
 	.comment
-		display: flex
+		display: none
 		align-items: flex-start
+		&--active
+			display: flex
 		&__photo
 			text-align: center
 			margin-right: 100px
@@ -63,7 +106,7 @@
 				background: url('../img/back_expert.png') no-repeat center
 				width: 171px
 				height: 75px
-				line-height: 75px
+				line-height: 70px
 				display: block
 				background-size: cover
 				margin: auto
@@ -72,7 +115,7 @@
 				color: white
 				font-style: italic
 		&__text
-			align-self: flex-end
+			margin-top: 50px
 			padding: 30px 40px 30px 40px
 			border-radius: 10px
 			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05)
@@ -81,18 +124,27 @@
 			max-width: 100%
 			position: relative
 			background-color: white
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				left: -30px
+				top: 31px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 30px 30px 0
+				border-color: transparent #fff transparent transparent
 			&::before
 				content: ''
-				display: block
 				position: absolute
-				top: -11px
-				right: -11px
-				border: 1px solid #c7e0e3
-				border-radius: 10px 0 10px 0
-				width: 100%
-				height: 100%
-				z-index: -2
-				background-color: #f6fcfd
+				left: -32px
+				top: 30px
+				width: 0
+				height: 0
+				border-style: solid
+				border-width: 0 30px 30px 0
+				border-color: transparent #e1ebec transparent transparent
 			.text
 				font-size: 20px
 				line-height: 1.4
