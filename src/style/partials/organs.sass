@@ -1,0 +1,385 @@
+.twenty-color
+	color: #f2bd70
+
+.flex-color
+	color: #ec7902
+
+.organs
+	padding: 100px 0
+
+.title-organs
+	max-width: 630px
+	margin-bottom: 28px
+
+.organs__left, .organs__right
+	margin-top: 80px
+
+.organs__wrap
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	counter-reset: organs
+
+.organs__item-wrap
+	position: relative
+	counter-increment: organs
+
+.organs__item
+	max-width: 421px
+	border: 1px solid #e1ebec
+	border-radius: 5px
+	padding: 23px 10px
+	position: relative
+	background: #fff
+	z-index: auto
+	margin-bottom: 40px
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05)
+	counter-increment: organs
+	transition: .5s
+	&::after
+		content: '0' counter(organs)
+		font-weight: 700
+		font-size: 36px
+		color: #f2bd70
+		z-index: -1
+		position: absolute
+		top: -19px
+		right: 63px
+		transition: .5s;
+	&:hover
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
+		&::after
+			transform: translateY(-10px)
+		.organs__dot
+			animation: pulse 1.5s linear infinite
+		.organs__img
+			box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4)
+
+@keyframes pulse
+	0%
+		box-shadow: 0 0 0 5px rgba(134,172,19,.6), 0 0 0 10px rgba(134,172,19,.3)
+	25%
+		box-shadow: 0 0 0 2px rgba(134,172,19,.6), 0 0 0 5px rgba(134,172,19,.3)
+	50%
+		box-shadow: 0 0 0 0px rgba(134,172,19,.6), 0 0 0 0px rgba(134,172,19,.3)
+	75%
+		box-shadow: 0 0 0 2px rgba(134,172,19,.6), 0 0 0 5px rgba(134,172,19,.3)
+	100%
+		box-shadow: 0 0 0 5px rgba(134,172,19,.6), 0 0 0 10px rgba(134,172,19,.3)
+
+.organs__name
+	color: #000
+	font-weight: 600
+	font-size: 22px
+	line-height: 1
+	margin-bottom: 10px
+
+.organs__text
+	font-size: 18px
+	line-height: 1.2
+	color: #444444
+	font-style: italic
+
+.organs__img-wrap
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: auto
+	flex-shrink: 0
+
+.organs__img
+	width: 90px
+	height: 90px
+	border-radius: 50%
+	border: 3px solid #ec7902
+	overflow: hidden
+	transition: .5s;
+
+
+.organs__mid
+	margin: 0 78px
+	flex-shrink: 0
+
+.organs__left
+	.organs__item
+		padding-right: 65px
+		text-align: right
+	.organs__img-wrap
+		right: -50px
+
+
+.organs__right
+	.organs__item
+		padding-left: 65px
+		text-align: left
+		&::after
+			right: auto
+			left: 63px
+	.organs__img-wrap
+		left: -50px
+
+
+.organs__dot
+	width: 16px
+	height: 16px
+	border-radius: 50%
+	background: rgba(134,172,19,1)
+	box-shadow: 0px 0px 0px 5px rgba(134,172,19,0.6), 0px 0px 0px 10px rgba(134,172,19,0.3)
+	position: absolute
+
+.organs__dot-1
+    top: 135px
+    left: 115px
+    &::before
+    	content: ''
+    	width: 90px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+    	top: -42px
+    	left: -49px
+    	z-index: -1
+    	transform: rotate(75deg)
+    &::after
+    	content: ''
+    	width: 15px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+    	top: -85px
+    	left: -31px
+    	z-index: -1
+
+.organs__dot-2
+    top: 55px
+    left: 170px
+    &::before
+    	content: ''
+    	width: 72px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+	    top: -4px;
+    	left: -62px;
+    	transform: rotate(16deg);
+    	z-index: -1
+    &::after
+    	content: ''
+    	width: 24px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+	    top: -14px
+    	left: -84px
+    	z-index: -1
+
+.organs__dot-3
+	top: 67px
+	left: -46px
+	&::before
+    	content: ''
+    	width: 40px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+	    top: -10px;
+    	left: 7px;
+    	transform: rotate(-45deg);
+    	z-index: -1
+	&::after
+    	content: ''
+    	width: 10px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+    	top: -24px
+    	left: 41px
+    	z-index: -1
+
+.organs__dot-4
+	top: -58px
+	left: -72px
+	&::before
+    	content: ''
+    	width: 113px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+	    top: 63px;
+    	left: -23px;
+    	transform: rotate(-115deg);
+    	z-index: -1
+	&::after
+    	content: ''
+    	width: 20px
+    	height: 1px
+    	background: #87ac13
+    	position: absolute
+    	top: 114px
+    	left: 57px
+    	z-index: -1
+
+
+
++r(1199)
+	.organs__wrap
+		margin: 0 auto
+		max-width: 1004px
+
+	.organs__name
+		font-size: 19px
+		br
+			display: none
+
+	.organs__text
+		line-height: 1.1
+		br
+			display: none
+
+	.organs__left
+		.organs__item
+			padding-right: 48px
+
+	.organs__right
+		.organs__item
+			padding-left: 48px
+
+	.organs__left, .organs__right
+		margin-top: 60px
+
++r(1023)
+	.organs__wrap
+		max-width: 760px
+
+	.organs__img
+		width: 80px
+		height: 80px
+
+	.organs__left 
+		.organs__img-wrap
+			right: -40px
+	
+	.organs__right 
+		.organs__img-wrap
+			left: -40px
+
+	.organs__mid
+		max-width: 150px
+		margin: 0 20px
+
+	.organs__left, .organs__right
+		margin-top: 50px
+
+	.organs__item
+		padding: 10px
+		min-height: 180px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.organs__name
+		font-size: 18px
+		margin-bottom: 8px
+
+	.organs__dot
+		width: 10px
+		height: 10px
+		box-shadow: 0 0 0 4px rgba(134,172,19,.6), 0 0 0 8px rgba(134,172,19,.3)
+		&::after
+			display: none
+
+	.organs__dot-1
+		top: 125px
+		left: 65px
+		&::before
+			left: -52px
+
+	.organs__dot-2
+		top: 38px
+		left: 110px
+		&::before
+			transform: rotate(0deg)
+			top: 5px
+
+	.organs__dot-3
+		top: 87px
+		left: -3px
+		&::before
+			left: 0
+
+	.organs__dot-4
+		top: -86px
+		left: -15px
+		&::before
+			left: -24px
+
++r(767)
+	.organs__mid
+		display: none
+
+	.organs__dot
+		display: none
+
+	.organs__right 
+		.organs__img-wrap
+			position: relative
+			top: 0
+			left: 0
+			transform: translateY(0);
+			order: -1
+			margin-right: 10px
+
+	.organs__left 
+		.organs__img-wrap
+			position: relative
+			top: 0
+			left: 0
+			transform: translateY(0);
+			order: -1
+			margin-right: 10px
+
+	.organs__wrap
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	
+	.organs__left 
+		.organs__item
+			text-align: left
+			padding-right: 10px
+			&::after
+				right: auto
+				left: 63px
+
+	.organs__right 
+		.organs__item
+			padding-left: 10px
+
+	.organs__img
+		width: 90px
+		height: 90px
+
+	.organs__item
+		min-height: auto
+		padding: 20px 10px
+
+	.organs__left, .organs__right
+		margin-top: 0
+
+	.title-organs
+		margin-bottom: 45px
+
++r(479)
+	.organs__img
+		width: 80px
+		height: 80px
+
+	.organs__item
+		padding: 10px
+
+	.organs__name
+		font-size: 17px
+		letter-spacing: -0.2px
+
+	.organs__text
+		font-size: 17px

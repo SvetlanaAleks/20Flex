@@ -9,5 +9,8 @@ $('.another__benefit , .another__limitation').click(function(){
 		$(this).find('.another__plus').text('+');
 	}
 
-	
 });
+
+$('.stat__info').mCustomScrollbar({
+    axis: 'y'
+})
